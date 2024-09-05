@@ -9,14 +9,14 @@ const port = process.env.PORT || 5000;
 
 dotenv.config();
 
-app.get('/', (req, res) => {
-    res.send('hi');
-});
-
 app.use(cors({
     origin: 'http://localhost:5173', 
     methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
+
+app.get('/', (req, res) => {
+    res.send('hi');
+});
 
 app.use(json());
 
