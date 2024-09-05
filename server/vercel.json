@@ -9,7 +9,7 @@
     "routes": [
       {
         "src": "/events/(.*)",
-        "dest": "index.js"
+        "dest": "/index.js"
       }
     ]
   }
