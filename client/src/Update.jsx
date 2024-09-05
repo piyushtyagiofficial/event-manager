@@ -11,7 +11,7 @@ function Update() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:5000/events/${id}`)
+            .get(`https://event-manager-backend-five.vercel.app/events/${id}`)
             .then(response => {
                 setEvent(response.data);
                 setIsLoading(false);
@@ -41,7 +41,7 @@ function Update() {
         };
 
         axios
-            .put(`http://localhost:5000/events/${id}`, updatedEvent)
+            .put(`https://event-manager-backend-five.vercel.app/events/${id}`, updatedEvent)
             .then(() => {
                 // Handle successful update
                 alert("Details Updated Successfully");
