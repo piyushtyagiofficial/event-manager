@@ -14,10 +14,6 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
 
-app.get('/', (req, res) => {
-    res.send('hi');
-});
-
 app.use(json());
 
 // Connect to MongoDB using mongoose.connect
@@ -29,6 +25,11 @@ mongoose.connect(process.env.MONGO_URI, {
     .catch((error) => console.error('Failed to connect to MongoDB', error));
 
 // Define your routes here
+app.get('/', (req, res) => {
+    res.send('hi');
+});
+
+
 app.use('/events', eventRoutes);
 
 app.listen(port, () => {
