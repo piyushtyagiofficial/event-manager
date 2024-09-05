@@ -27,6 +27,9 @@ mongoose.connect(process.env.MONGO_URI, {
 // Define your routes here
 
 app.use('/events', eventRoutes);
+app.get("/events", (req, res) => {
+  res.json("Hii");
+})
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
