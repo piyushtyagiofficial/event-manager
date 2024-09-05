@@ -25,10 +25,9 @@ mongoose.connect(process.env.MONGO_URI, {
     .catch((error) => console.error('Failed to connect to MongoDB', error));
 
 // Define your routes here
-app.get('/', (req, res) => {
-    res.send('hi');
-});
-
+app.get("/", async(req, res) => {
+  res.json("Hii");
+})
 
 app.use('/events', eventRoutes);
 
