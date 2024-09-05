@@ -25,11 +25,12 @@ mongoose.connect(process.env.MONGO_URI, {
     .catch((error) => console.error('Failed to connect to MongoDB', error));
 
 // Define your routes here
-
-app.use('/events', eventRoutes);
 app.get("/events", (req, res) => {
   res.json("Hii");
-})
+});
+
+app.use('/events', eventRoutes);
+
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
