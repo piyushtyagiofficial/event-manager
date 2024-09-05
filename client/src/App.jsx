@@ -11,7 +11,7 @@ function App() {
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/events')
+        axios.get('https://event-manager-backend-five.vercel.app/events')
             .then(response => {
                 setEvents(response.data);
             })
@@ -36,7 +36,7 @@ function App() {
 
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevent the default form submit action
-        axios.post('http://localhost:5000/events', formData)
+        axios.post('https://event-manager-backend-five.vercel.app/events', formData)
             .then(response => {
                 console.log('Event added successfully:', response.data);
                 setFormData({
@@ -55,7 +55,7 @@ function App() {
     };
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:5000/events/${id}`)
+        axios.delete(`https://event-manager-backend-five.vercel.app/events/${id}`)
             .then(response => {
                 console.log('Event deleted successfully:', response.data);
                 setIsSuccess(true);
