@@ -26,7 +26,9 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // Define your routes here
 app.use('/events', eventRoutes);
-
+app.get('/', (req, res) => {
+    res.send('API is running...');
+});
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
