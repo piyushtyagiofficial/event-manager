@@ -36,7 +36,7 @@ function App() {
 
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevent the default form submit action
-        axios.post('https://event-manager-backend-five.vercel.app/events', formData)
+        axios.post('https://event-manager-backend-five.vercel.app/events/', formData)
             .then(response => {
                 console.log('Event added successfully:', response.data);
                 setFormData({
