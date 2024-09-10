@@ -11,7 +11,7 @@ function App() {
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
-        axios.get('https://event-manager-backend-five.vercel.app/events')
+        axios.get('https://event-manager-backend-five.vercel.app/events/')
             .then(response => {
                 setEvents(response.data);
             })
