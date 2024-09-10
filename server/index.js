@@ -29,7 +29,7 @@ app.use('/events', eventRoutes);
 app.get('/', (req, res) => {
     res.send('API is running...');
 });
-app.get("/", (req, res) => {
+app.get("/ping", (req, res) => {
     res.send("Pong");
 });
 app.listen(port, () => {
