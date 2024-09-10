@@ -6,7 +6,7 @@ const Home = () => {
     const [events, setEvents] = useState([]);
 
     useEffect(() => {
-        axios.get('https://event-manager-backend-five.vercel.app/events')
+        axios.get('https://event-manager-backend-five.vercel.app/events/')
             .then(response => {
                 setEvents(response.data);
                 console.log(response.data);
